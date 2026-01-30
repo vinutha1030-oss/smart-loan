@@ -1,10 +1,10 @@
 class Code2{
-    public static void main(String[]args){
-     int a = 23;
-     double b = a;
-     System.out.println("int value:" + a);
-     System.out.println("double value:" + b);
-     
-    }
-    
+    public  static int add(int x , int y){
+        int ans = x + y;
+        return ans;
+      }
+      public static void main(String[]args){
+        int res = add(20,30);
+        System.out.println(res);
+      }      
 }

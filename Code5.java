@@ -1,8 +1,12 @@
 class Code5{
-    public static void main(String[]args){
-       double pi = 3.14;
-       int r = 2;
-       double area = pi * r * r;
-        System.out.println("the area is:" +area);
+    public static void add(){
+
     }
+    public static int add(int a , int b , int c){
+
+    }
+}
+public static void main(String[]args){
+    add(10,20);
+    add(10,20,30);
 }

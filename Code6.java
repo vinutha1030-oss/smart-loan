@@ -1,14 +1,10 @@
-class Code6{
-    public static void main(String[]args){
-        int a = 16;
-        int b = 31;
-          
-        if (a % b == 0)
-            System.out.println("even");
-        
-        else 
-            System.out.println("odd");
-        
-        
+ public class Code6{
+    static int a = 25;
+    public static int print(){
+        return a;
     }
-}
+    public static void main(String[]args){
+        int res = print();
+        System.out.println(res);
+    }
+ }              
