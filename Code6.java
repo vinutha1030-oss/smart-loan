@@ -1,10 +1,22 @@
- public class Code6{
-    static int a = 25;
-    public static int print(){
-        return a;
+abstract class Shape {
+    abstract void draw();
+
+    void message() {
+        System.out.println("Hello");
     }
-    public static void main(String[]args){
-        int res = print();
-        System.out.println(res);
+}
+
+class Circle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing Circle");
     }
- }              
+}
+
+public class Code6 {
+    public static void main(String[] args) {
+        Circle cl = new Circle();
+        cl.draw();
+        cl.message();
+    }
+}
