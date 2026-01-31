@@ -1,22 +1,37 @@
 import java.util.Scanner;
-class Code11{
-    public static void main(String[]args){
-        
 
+class Code11 {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Read input from the user
-        System.out.print("Enter a number: ");
-        int N = sc.nextInt();
+        System.out.print("Enter number of rows: ");
+        int rows = sc.nextInt();
 
-        // Calculate the sum of first N natural numbers
-        int sum = N * (N + 1) / 2;
+        System.out.print("Enter number of columns: ");
+        int cols = sc.nextInt();
 
-        // Display the result
-        System.out.println("Sum of first " + N + " natural numbers is: " + sum);
+        int[][] arr = new int[rows][cols];
+
+        System.out.println("Enter elements of the array:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        int largest = arr[0][0];  // assume first element is largest
+
+        // Find the largest element
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (arr[i][j] > largest) {
+                    largest = arr[i][j];
+                }
+            }
+        }
+
+        System.out.println("Largest element in the 2D array = " + largest);
 
         sc.close();
     }
 }
-
-    
