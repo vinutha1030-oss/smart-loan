@@ -1,28 +1,35 @@
-import java.util.Scanner;
-
-class Code10 {
+public class Code10 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter number of rows: ");
-        int rows = sc.nextInt();
+        int n = 50000;
 
-        System.out.print("Enter number of columns: ");
-        int cols = sc.nextInt();
+        // -------- Program 1: Using String --------
+        long startTime1 = System.currentTimeMillis();
 
-        int[][] matrix = new int[rows][cols];
-        int sum = 0;
-
-        System.out.println("Enter matrix elements:");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                matrix[i][j] = sc.nextInt();
-                sum += matrix[i][j];   // Add each element to sum
-            }
+        String str = "";
+        for (int i = 1; i <= n; i++) {
+            str += i; // concatenation using String
         }
 
-        System.out.println("Total sum of all elements = " + sum);
+        long endTime1 = System.currentTimeMillis();
+        long duration1 = endTime1 - startTime1;
 
-        sc.close();
+        System.out.println("Time taken using String: " + duration1 + " ms");
+
+        // -------- Program 2: Using StringBuilder --------
+        long startTime2 = System.currentTimeMillis();
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i <= n; i++) {
+            sb.append(i); // concatenation using StringBuilder
+        }
+
+        long endTime2 = System.currentTimeMillis();
+        long duration2 = endTime2 - startTime2;
+
+        System.out.println("Time taken using StringBuilder: " + duration2 + " ms");
     }
 }
+
+
+        
