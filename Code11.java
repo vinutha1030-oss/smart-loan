@@ -1,37 +1,15 @@
-import java.util.Scanner;
-
-class Code11 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter number of rows: ");
-        int rows = sc.nextInt();
-
-        System.out.print("Enter number of columns: ");
-        int cols = sc.nextInt();
-
-        int[][] arr = new int[rows][cols];
-
-        System.out.println("Enter elements of the array:");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                arr[i][j] = sc.nextInt();
-            }
+public class Code11{
+    static void checkAge(int age)throws ArithmeticException {
+        if(age < 18) {
+            throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+            
+        }
+        else{
+            System.out.println("Access granted - You are old enough!");
         }
 
-        int largest = arr[0][0];  // assume first element is largest
-
-        // Find the largest element
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                if (arr[i][j] > largest) {
-                    largest = arr[i][j];
-                }
-            }
-        }
-
-        System.out.println("Largest element in the 2D array = " + largest);
-
-        sc.close();
+    }
+    public static void main(String[]args){
+        checkAge(15);
     }
 }
